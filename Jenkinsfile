@@ -4,7 +4,7 @@ pipeline {
         stage('Initialize') {
             steps {
                 echo 'Initializing..'
-                python pip install -r requirements.txt
+                bat python pip install -r requirements.txt
             }
         }
         stage('Build') {
