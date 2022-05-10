@@ -4,7 +4,7 @@ pipeline {
         stage('Initialize') {
             steps {
                 echo 'Initializing..'
-                bat python pip install -r requirements.txt
+                bat 'python pip install -r requirements.txt'
             }
         }
         stage('Build') {
@@ -15,6 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat 'python main.py'
             }
         }
         stage('Deploy') {
